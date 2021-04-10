@@ -87,7 +87,7 @@ public class TestPaginaWeb {
     driver.manage().window().setSize(new Dimension(658, 458));
     // 3 | click | css=.btn | 
     driver.findElement(By.cssSelector(".btn")).click();
-    // Comprobar URL de la página
+    // Comprobar URL de la pï¿½gina
     String url = driver.getCurrentUrl();
     Assert.assertEquals(url, "https://github.com/mfg306/FernandezMoraHMIS2021/tree/master/pagina_web");
     
@@ -98,7 +98,7 @@ public class TestPaginaWeb {
     driver.get("http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/");
     driver.manage().window().setSize(new Dimension(658, 458));
     driver.findElement(By.cssSelector(".order-lg-1 a")).click();
-    // Comprobar URL de la página
+    // Comprobar URL de la pï¿½gina
     String url = driver.getCurrentUrl();
     Assert.assertEquals(url, "https://github.com/mfg306/FernandezMoraHMIS2021/tree/master/pagina_web");
   }
@@ -113,7 +113,7 @@ public class TestPaginaWeb {
     driver.manage().window().setSize(new Dimension(1552, 840));
     // 3 | click | linkText=Enlace de acceso | 
     driver.findElement(By.linkText("Enlace de acceso")).click();
-    // Comprobar URL de la página
+    // Comprobar URL de la pï¿½gina
     String url = driver.getCurrentUrl();
     Assert.assertEquals(url, "https://docs.github.com/es");
 
@@ -129,7 +129,7 @@ public class TestPaginaWeb {
     driver.manage().window().setSize(new Dimension(1552, 840));
     // 3 | click | css=.col-lg-6 > a | 
     driver.findElement(By.cssSelector(".col-lg-6 > a")).click();
-    // Comprobar URL de la página
+    // Comprobar URL de la pï¿½gina
     String url = driver.getCurrentUrl();
     Assert.assertEquals(url, "https://github.com/ualhmis/");
    
@@ -145,7 +145,7 @@ public class TestPaginaWeb {
     driver.manage().window().setSize(new Dimension(1552, 840));
     // 3 | click | css=.col-lg-6:nth-child(2) a:nth-child(2) | 
     driver.findElement(By.cssSelector(".col-lg-6:nth-child(2) a:nth-child(2)")).click();
-    // Comprobar URL de la página
+    // Comprobar URL de la pï¿½gina
     String url = driver.getCurrentUrl();
     Assert.assertEquals(url, "https://www.gitbook.com/");
    
@@ -161,10 +161,75 @@ public class TestPaginaWeb {
     driver.manage().window().setSize(new Dimension(1552, 840));
     // 3 | click | css=.col-lg-6:nth-child(1) > .p-5 > a:nth-child(2) | 
     driver.findElement(By.cssSelector(".col-lg-6:nth-child(1) > .p-5 > a:nth-child(2)")).click();
-    // Comprobar URL de la página
+    // Comprobar URL de la pï¿½gina
     String url = driver.getCurrentUrl();
     Assert.assertEquals(url, "https://azure.microsoft.com/es-es/free/search/?&ef_id=EAIaIQobChMIvpHqx6Go7wIV8e3mCh0ggASREAAYASAAEgLMnfD_BwE:G:s&OCID=AID2100112_SEM_EAIaIQobChMIvpHqx6Go7wIV8e3mCh0ggASREAAYASAAEgLMnfD_BwE:G:s");
     
+  }
+  
+  @Test
+  public void testDocumentacionAzure() {
+    // Test name: TestDocumentacionAzure
+    // Step # | name | target | value
+    // 1 | open | http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/ | 
+    driver.get("http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/");
+    // 2 | setWindowSize | 1552x840 | 
+    driver.manage().window().setSize(new Dimension(1552, 840));
+    // 3 | click | css=section:nth-child(5) .col-lg-6:nth-child(2) a | 
+    driver.findElement(By.cssSelector("section:nth-child(5) .col-lg-6:nth-child(2) a")).click();
+    // Comprobar URL de la pï¿½gina
+    String url = driver.getCurrentUrl();
+    Assert.assertEquals(url, "https://docs.microsoft.com/es-es/azure/?product=featured");
+   
+  
+  }
+  
+  @Test
+  public void testPaginaJorge() {
+    // Test name: TestPaginaJorge
+    // Step # | name | target | value
+    // 1 | open | http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/ | 
+    driver.get("http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/");
+    // 2 | setWindowSize | 1552x840 | 
+    driver.manage().window().setSize(new Dimension(1552, 840));
+    // 3 | click | css=.nav-item:nth-child(1) > .nav-link | 
+    driver.findElement(By.cssSelector(".nav-item:nth-child(1) > .nav-link")).click();
+    // Comprobar URL de la pï¿½gina
+    String url = driver.getCurrentUrl();
+    Assert.assertEquals(url, "http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/jorge.html");
+    
+  }
+  
+  @Test
+  public void testPaginaMarta() {
+    // Test name: TestPaginaMarta
+    // Step # | name | target | value
+    // 1 | open | http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/ | 
+    driver.get("http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/");
+    // 2 | setWindowSize | 1552x840 | 
+    driver.manage().window().setSize(new Dimension(1552, 840));
+    // 3 | click | css=.nav-item:nth-child(2) > .nav-link | 
+    driver.findElement(By.cssSelector(".nav-item:nth-child(2) > .nav-link")).click();
+    // Comprobar URL de la pï¿½gina
+    String url = driver.getCurrentUrl();
+    Assert.assertEquals(url, "http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/marta.html");
+ 
+  }
+  
+  @Test
+  public void testPaginaPrincipal() {
+    // Test name: TestPaginaPrincipal
+    // Step # | name | target | value
+    // 1 | open | http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/ | 
+    driver.get("http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/");
+    // 2 | setWindowSize | 1552x840 | 
+    driver.manage().window().setSize(new Dimension(1552, 840));
+    // 3 | click | css=.navbar-brand | 
+    driver.findElement(By.cssSelector(".navbar-brand")).click();
+    // Comprobar URL de la pï¿½gina
+    String url = driver.getCurrentUrl();
+    Assert.assertEquals(url, "http://hmis2021-web.eastus.cloudapp.azure.com/FernandezMoraHMIS2021/pagina_web/index.html");
+   
   }
   
 }
